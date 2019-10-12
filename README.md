@@ -8,7 +8,7 @@ Biblioteca de funções matemáticas.
 ### Requisitos
 
 - [PHP >= 7.0](https://www.php.net/releases/7_0_0.php) ou superior.
-- [Composer](https://getcomposer.org/) (caso queira executar os testes automáticos).
+- [Composer](https://getcomposer.org/).
 
 ### Dependências
 
@@ -16,7 +16,7 @@ Biblioteca de funções matemáticas.
 
 ### Execução
 
-1. Faça o clone do projeto com `git clone https://github.com/lucascruz96/matematicaphp`.
+1. Faça o clone do projeto com `git clone https://github.com/lucascruz96/matematicaphp.git`.
 2. Acesse a pasta do projeto e execute o comando `composer install` para instalar as dependências.
 
 ### Testes
@@ -35,6 +35,4 @@ Modulo responsável pelas equações matemáticas.
 #### public static function resolverEquacaoSegundoGrau(float $a, float $b, float $c)
 
 Função para calcular as raízes de uma equação de segundo grau.
-Recebe os coeficientes da equação por parametro e retorna um array contendo o resultado das raizes.
-
-Array de retorno `['+' => $raizPositiva, '-' => $raizNegativa]`.
+Recebe os coeficientes da equação por parametro e retorna um objeto do tipo `ResultadoEquacaoSegundoGrau` contendo o resultado das raizes.

@@ -2,6 +2,8 @@
 
 namespace MatematicaPHP;
 
+use MatematicaPHP\Entidades\ResultadoEquacaoSegundoGrau;
+
 class Equacoes
 {
     /**
@@ -9,7 +11,7 @@ class Equacoes
      * @param float $b Coeficiente b da equação.
      * @param float $c Coeficiente c da equação.
      * 
-     * @return array
+     * @return MatematicaPHP\Entidades\ResultadoEquacaoSegundoGrau
      */
     public static function resolverEquacaoSegundoGrau(float $a, float $b, float $c)
     {
@@ -18,6 +20,6 @@ class Equacoes
         $raizPositiva = (($b * -1) + sqrt($delta)) / (2 * $a);
         $raizNegativa = (($b * -1) - sqrt($delta)) / (2 * $a);
 
-        return ['+' => $raizPositiva, '-' => $raizNegativa];
+        return new ResultadoEquacaoSegundoGrau($raizPositiva, $raizNegativa);
     }
 }
